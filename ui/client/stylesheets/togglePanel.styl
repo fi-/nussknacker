@@ -2,22 +2,35 @@
 
 .togglePanel
   position: absolute
-  bottom: 0
-  height: 25px
-  width: 25px
+  top: 7px
+  padding 3px
+  height: 18px
+  width: 18px
+  background-color:#646464
   align-items: center
   justify-content: center
   transition: left 0.5s ease, right 0.5s ease;
   z-index: 100
   cursor: pointer
+  svg
+    width 10px
+    height 10px
+    margin 1px
 
   &.right
     right: 0
-
+    border-top-left-radius: 3px
+    border-bottom-left-radius: 3px
     &.is-opened
-      right: panelWidth
+      right: 0
+      border-bottom-left-radius: 0
+      
 
   &.left
     left: 0
+    border-top-right-radius: 3px
+    border-bottom-right-radius: 3px
     &.is-opened
-      left: panelWidth
+      left: 0
+      border-bottom-right-radius: 0
+      

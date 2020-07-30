@@ -56,7 +56,7 @@ export function SidePanel(props: PropsWithChildren<SidePanelProps>) {
     <>
       {!isOpened || showToggle ? <TogglePanel type={side} isOpened={isOpened} onToggle={onToggle}/> : null}
       <ScrollTogglePanel
-        onScrollToggle={setShowToggle}
+        // onScrollToggle={setShowToggle}
         isCollapsed={!isOpened}
         className={cn(side, side === PanelSide.Left ? panelStyles.left : panelStyles.right)}
         innerClassName={className}

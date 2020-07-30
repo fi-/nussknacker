@@ -22,9 +22,14 @@
         cursor all-scroll
         border-radius scrollThumbSize
         background-color rgba(black, .45)
+        margin-top 2px
 
     .content
         display flex
+
+    .disabled .content
+        :global(.RIGHT) &
+            margin-left 3px //TODO: there should be a cleaner way to do this. It causes a slight animation bump.
 
     .enabled
         pointer-events auto
@@ -33,10 +38,20 @@
         pointer-events inherit
 
     .wrapper
+        :global(.LEFT) &
+            border-top-right-radius 3px
+        :global(.RIGHT) &
+            border-top-left-radius 3px
+
+    .wrapper
         min-height 100%
         display flex
         transition all .25s
         overflow hidden
+        background #646464
+        width (panelWidth - scrollThumbSize + 3px)
 
         &.enabled
             background #646464
+            width panelWidth 
+            

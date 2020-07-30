@@ -9,7 +9,7 @@
         transition left 0.5s ease, right 0.5s ease
         position absolute
         z-index 1
-        top 0
+        top 25px
         bottom 0
         overflow hidden
 
@@ -23,18 +23,21 @@
 
     .left
         left: -(panelWidth)
-
+        border-top-right-radius 3px
         &.is-opened
             left: 0
 
         .side-panel
             align-items flex-start
-
+        .wrapper
+            border-top-right-radius 3px
     .right
         right -(panelWidth)
-
+        border-top-left-radius 3px
         &.is-opened
             right 0
 
         .side-panel
             align-items flex-end
+        .wrapper
+            border-top-left-radius 3px
